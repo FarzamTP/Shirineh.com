@@ -30,11 +30,21 @@
 
 .farsi_font {
     font-family: Sahel;
-    text-align: right;
+    text-align-last: right;
 }
 
 .farsi_font_bold {
     font-family: Sahel;
     font-weight: bold;
-    text-align: right;
+    text-align-last: right;
+}
+
+.farsi_font_center {
+    font-family: Sahel;
+    text-align-last: center;
+}
+
+.farsi_font_left {
+    font-family: Sahel;
+    text-align-last: left;
 }
