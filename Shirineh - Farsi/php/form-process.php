@@ -17,19 +17,19 @@ if (empty($_POST["email"])) {
 }
 
 // MSG Guest
-if (empty($_POST["guest"])) {
-    $errorMSG .= "Subject is required ";
-} else {
-    $guest = $_POST["guest"];
-}
+// if (empty($_POST["guest"])) {
+//     $errorMSG .= "Subject is required ";
+// } else {
+//     $guest = $_POST["guest"];
+// }
 
 
 // MSG Event
-if (empty($_POST["event"])) {
-    $errorMSG .= "Subject is required ";
-} else {
-    $event = $_POST["event"];
-}
+// if (empty($_POST["event"])) {
+//     $errorMSG .= "Subject is required ";
+// } else {
+//     $event = $_POST["event"];
+// }
 
 
 // MESSAGE
@@ -50,12 +50,6 @@ $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
-$Body .= "\n";
-$Body .= "guest: ";
-$Body .= $guest;
-$Body .= "\n";
-$Body .= "event: ";
-$Body .= $event;
 $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
