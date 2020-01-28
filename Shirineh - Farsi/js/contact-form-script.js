@@ -17,18 +17,17 @@ function submitForm(){
     var email = $("#email").val();
     var message = $("#message").val();
 
+    var data = "Name: " + name + " with Email: " + email + " posted: " + message;
 
     $.ajax({
         type: "POST",
-        url: "php/form-process.php",
-        data: "name=" + name + "&email=" + email + "&message=" + message,
-        success : function(text){
-            // FIXME: if (text === "success") is changed!!!
-            if (true){
+        url: "https://api.telegram.org/bot997003144:AAESInEPRqMgMz1DCzuvs71DaSfyqwOjlC4/sendMessage?chat_id=313030525&text=" + data,
+        success : function(result){
+            if (result.ok === true){
                 formSuccess();
             } else {
                 formError();
-                submitMSG(false,text);
+                submitMSG(false, 'خطایی در ثبت پیام شما به وجود آمده است. لطفا دوباره تلاش کنید');
             }
         }
     });
