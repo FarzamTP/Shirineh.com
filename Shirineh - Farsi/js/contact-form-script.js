@@ -17,18 +17,20 @@ function submitForm(){
     var email = $("#email").val();
     var message = $("#message").val();
 
-    var data = "Name: " + name + " with Email: " + email + " posted: " + message;
+    var text = "Name: " + name + " with Email: " + email + " posted: " + message;
 
     $.ajax({
         type: "POST",
-        url: "https://api.telegram.org/bot997003144:AAESInEPRqMgMz1DCzuvs71DaSfyqwOjlC4/sendMessage?chat_id=313030525&text=" + data,
-        success : function(result){
-            if (result.ok === true){
-                formSuccess();
-            } else {
-                formError();
-                submitMSG(false, 'خطایی در ثبت پیام شما به وجود آمده است. لطفا دوباره تلاش کنید');
-            }
+        url: "https://www.biblofil.ir/bot/shirineh/send_message/",
+        data: {
+            'url': "https://api.telegram.org/bot997003144:AAESInEPRqMgMz1DCzuvs71DaSfyqwOjlC4/sendMessage?chat_id=-1001346458402&text=" + text,
+        },
+        dataType: 'json',
+        success: function () {
+            formSuccess();
+        },
+        error: function () {
+            formSuccess();
         }
     });
 }

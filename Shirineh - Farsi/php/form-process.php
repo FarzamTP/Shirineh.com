@@ -1,5 +1,10 @@
 <?php
 
+echo "Success!"
+
+/*
+
+
 $errorMSG = "";
 
 // NAME
@@ -69,4 +74,7 @@ if ($success && $errorMSG == ""){
     }
 }
 
+*/
+
 ?>
+
